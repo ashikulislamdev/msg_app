@@ -21,6 +21,42 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text("Qube Chat"),
+        actions: [
+          const Padding(
+            padding: EdgeInsets.only(top: 12, right: 15),
+            child: Icon(Icons.search, size: 28,),
+          ),
+          PopupMenuButton(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            iconSize: 28,
+            itemBuilder: (context) => const [
+              PopupMenuItem(
+                value: 1,
+                child: Text("New group", style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),)
+              ),
+              PopupMenuItem(
+                value: 2,
+                child: Text("New broadcast", style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),)
+              ),
+              PopupMenuItem(
+                value: 3,
+                child: Text("Linked device", style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),)
+              ),
+              PopupMenuItem(
+                value: 4,
+                child: Text("Starred message", style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),)
+              ),
+              PopupMenuItem(
+                value: 5,
+                child: Text("Settings", style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500),)
+              ),
+            ]
+          )
+        ],
+      ),
       body: ValueListenableBuilder(
         valueListenable: pageIndex, 
         builder: (BuildContext context, int value, _){

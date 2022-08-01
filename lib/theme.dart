@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-abstract class AppColors {
+abstract class AppColors {  //this file is collected from internet
   static const secondary = Color(0xFF3B76F6);
   static const accent = Color(0xFFD6755B);
   static const textDark = Color(0xFF53585A);
