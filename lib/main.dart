@@ -9,13 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.dark(),
-      themeMode: ThemeMode.dark,
+      theme: AppTheme.light(),
+      darkTheme: AppTheme.dark(),
+      themeMode: ThemeMode.system,
       title: 'Qube Chat App',
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text('App Bar'),
-        // ),
         body: HomeScreen(),
       ),
     );
