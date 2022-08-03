@@ -5,6 +5,7 @@ import 'package:msg_app/pages/contacts_page.dart';
 import 'package:msg_app/pages/messages_page.dart';
 import 'package:msg_app/pages/notifications_page.dart';
 import 'package:msg_app/theme.dart';
+import 'package:msg_app/widgets/action_btn.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -114,6 +115,11 @@ class _bottomNavigationState extends State<_bottomNavigation> {
             label: "Notifications",
             isSelected: (selectedIndex == 1),
             onTap: handleSelectedItem,
+          ),
+          GlowingActionButton(
+            color: AppColors.secondary, 
+            icon: Icons.add, 
+            onPressed: (){}
           ),
           _NavigationBarItem(
             index: 2,
