@@ -4,6 +4,7 @@ import 'package:jiffy/jiffy.dart';
 import 'package:msg_app/helpers.dart';
 
 import 'package:msg_app/modal/message_data.dart';
+import 'package:msg_app/screen/chat_creen.dart';
 import 'package:msg_app/theme.dart';
 import 'package:msg_app/widgets/avator.dart';
 
@@ -49,7 +50,7 @@ class _MessageTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        
+        Navigator.of(context).push(ChatScreen.route(messagesData));
       },
       child: Container(
         height: 80,
