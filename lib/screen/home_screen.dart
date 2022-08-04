@@ -14,9 +14,9 @@ class HomeScreen extends StatelessWidget {
 
   final pages = const [
     MessagesPage(),
+    ContactsPage(),
     NotificationsPage(),
     CallsPage(),
-    ContactsPage(),
   ];
 
   @override
@@ -111,9 +111,9 @@ class _bottomNavigationState extends State<_bottomNavigation> {
           ),
           _NavigationBarItem(
             index: 1,
-            icon: Icons.notifications,
-            label: "Notifications",
-            isSelected: (selectedIndex == 1),
+            icon: Icons.contacts,
+            label: "Contacts",
+            isSelected: (selectedIndex == 3),
             onTap: handleSelectedItem,
           ),
           GlowingActionButton(
@@ -123,16 +123,16 @@ class _bottomNavigationState extends State<_bottomNavigation> {
           ),
           _NavigationBarItem(
             index: 2,
-            icon: Icons.call,
-            label: "Calls",
-            isSelected: (selectedIndex == 2),
+            icon: Icons.notifications,
+            label: "Notifications",
+            isSelected: (selectedIndex == 1),
             onTap: handleSelectedItem,
           ),
           _NavigationBarItem(
             index: 3,
-            icon: Icons.contacts,
-            label: "Contacts",
-            isSelected: (selectedIndex == 3),
+            icon: Icons.call,
+            label: "Calls",
+            isSelected: (selectedIndex == 2),
             onTap: handleSelectedItem,
           ),
         ],
